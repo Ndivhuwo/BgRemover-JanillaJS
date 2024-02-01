@@ -1,0 +1,22 @@
+{
+  "name": "removebackground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-ts": "esbuild ./src/app.ts --platform=node --bundle --minify --outfile=public/index.js",
+    "build-js": "browserify ./src/app.ts -p esmify -o ./public/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@imgly/background-removal": "^1.4.1",
+    "browserify": "^17.0.0",
+    "esbuild": "^0.20.0",
+    "onnxruntime-web": "^1.17.0"
+  },
+  "devDependencies": {
+    "esmify": "^2.1.1"
+  }
+}
